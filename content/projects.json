@@ -1,0 +1,35 @@
+[
+  {
+    "id": "doble",
+    "title": "DOBLE — EMS iOS App",
+    "role": "Lead Developer",
+    "description": "Built with Swift, SwiftUI, Firebase, and Python cloud functions. Implemented MVVM, secure auth, and real-time sync for EMS workflows.",
+    "images": ["/assets/images/doble-1.webp","/assets/images/doble-2.webp"],
+    "tech": ["Swift","SwiftUI","Firebase","Python"],
+    "year": "2025",
+    "repo": "",
+    "live": ""
+  },
+  {
+    "id": "portfolio-site",
+    "title": "This Portfolio",
+    "role": "Creator",
+    "description": "Design and implementation of this portfolio website. Built with semantic HTML, responsive CSS, and vanilla JavaScript to showcase projects and provide a minimal, fast experience.",
+    "images": ["/assets/images/portfolio-1.webp"],
+    "tech": ["HTML","CSS","JavaScript"],
+    "year": "2025",
+    "repo": "https://github.com/sudo-nickPinto",
+    "live": ""
+  },
+  {
+    "id": "jamai",
+    "title": "JamAI (WIP)",
+    "role": "Developer",
+    "description": "Tool to generate backing tracks from sheet music/audio using ML techniques.",
+    "images": ["/assets/images/jamai-1.webp"],
+    "tech": ["Python","ML"],
+    "year": "2025",
+    "repo": "https://github.com/sudo-nickPinto",
+    "live": ""
+  }
+]

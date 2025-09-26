@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <!-- Google Fonts: JetBrains Mono (headings) + Inter (body) + Fira Code (monospace) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <!-- Header with navigation. This uses semantic <header> and <nav> elements. -->
+  <header>
+    <div class="container nav">
+      <!-- Brand / identity: uses your real name as recorded in the workflow document -->
+      <div class="brand">Nicholas Pinto</div>
+      <!-- Accessible navigation menu. Each link targets a semantic section below. -->
+      <nav id="main-menu" class="menu" aria-expanded="false">
+        <a href="#hero">home</a>
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#awards">awards</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <!-- Mobile menu toggle (visible on small screens via CSS) -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero section: first impression -->
+  <main>
+    <section id="hero" class="hero container">
+      <!-- Layered hero: intro overlay (black), split-name animation, then background reveal -->
+      <div class="hero-layers">
+        <!-- Intro overlay used for the name animation -->
+        <div id="intro-overlay" class="intro-overlay" aria-hidden="true">
+          <div class="intro-content">
+            <div class="name-split">
+              <span class="name-part name-top">Nicholas</span>
+              <span class="name-part name-bottom">Pinto</span>
+            </div>
+            <button id="begin-btn" class="begin-btn">Begin?</button>
+          </div>
+        </div>
+
+        <!-- Background image layer (Great Wave) -->
+        <div id="hero-bg" class="hero-bg" role="img" aria-label="Great Wave background"></div>
+
+        <!-- Main hero content that appears after intro animation -->
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1 id="hero-name" class="hero-name">Nicholas Pinto</h1>
+            <p class="subtitle">Aspiring Software Engineer — building practical projects that connect computer science and music</p>
+            <p class="elevator">I build academic and personal projects combining CS and music while learning new tools and approaches.</p>
+          </div>
+          <div class="hero-right">
+            <div id="typed-info" class="typed-info" aria-live="polite">
+              <div class="location"><span class="loc-icon">📍</span> <span class="loc-text">Gettysburg, PA</span></div>
+              <div class="time-weather">
+                <span class="time" id="gettysburg-time">--:--</span>
+                <span class="weather" id="weather">Loading weather…</span>
+              </div>
+              <div class="status">
+                <strong>What I'm up to?</strong>
+                <div id="status-text" class="status-text">Loading…</div>
+              </div>
+              <div class="visitor-count">You are visitor <span id="visitor-count">—</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="container">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-left">
+          <p>I am an aspiring software engineer and undergraduate student seeking my first software engineering internship. My academic projects have introduced me to full-stack development, Python scripting, Java applications, and Swift for iOS development. At Gettysburg, I am developing a machine learning model that analyzes sheet music and audio to generate backing tracks for guitar performance — combining technical skills with my passion for music.</p>
+
+          <p>Beyond the classroom, I bring leadership and organizational experience. As Vice President of my hometown EMS organization, I coordinated emergency response operations and oversaw team logistics. On campus, I work as a Resident Assistant and participate in my fraternity, which have strengthened my communication, teamwork, and mentorship abilities.</p>
+
+          <p>I am eager to contribute to a development team where I can apply my skills in Java, Python, Swift, and JavaScript while gaining real-world experience in backend systems or AI applications. My goal is to grow as a developer while making meaningful contributions to impactful projects.</p>
+
+          <h3>Tech stack</h3>
+          <ul>
+            <li>Languages: Java, Python, Swift, JavaScript (HTML, CSS)</li>
+            <li>Frameworks / Libraries: SwiftUI, JavaFX</li>
+            <li>Tools: Git, GitHub, Xcode, Firestore</li>
+            <li>Concepts: Data Structures & Algorithms, OOP, Unit Testing</li>
+          </ul>
+        </div>
+        <div class="about-right">
+          <div class="about-image-wrap" tabindex="0">
+            <img src="/assets/images/Saint Nicholas.jpg" alt="Saint Nicholas portrait">
+            <div class="about-overlay">
+              <div class="pointer-arrow"></div>
+              <div class="line"></div>
+              <div class="msg-container">
+                <div class="msg primary">❌ No, not this Nick!</div>
+                <div class="msg secondary">✅ The real Nick is the developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section: dynamically populated from content/projects.json by JS -->
+    <section id="projects" class="container">
+      <h2>Selected Projects</h2>
+      <!-- JS will insert .project-card elements here. aria-live helps screen readers when content loads -->
+      <div id="projects-grid" class="projects-grid" aria-live="polite">
+        <!-- noscript fallback: static content for users without JS -->
+        <noscript>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>DOBLE — EMS iOS App</h3>
+              <p>Lead Developer — Swift, SwiftUI, Firebase.</p>
+            </article>
+            <article class="project-card">
+              <h3>This Portfolio</h3>
+              <p>Static fallback content.</p>
+            </article>
+          </div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Awards section -->
+    <section id="awards" class="container">
+      <h2>Awards & Recognition</h2>
+      <ul>
+        <li>Darien High School Principal’s Award — exceptional academic achievement & leadership</li>
+        <li>Town of Darien Exemplary Leadership Award — service as Vice President of Post 53</li>
+        <li>AP Scholar with Distinction</li>
+        <li>Inducted into Pi Mu Epsilon (National Mathematics Honor Society) as one of three sophomores</li>
+      </ul>
+    </section>
+
+    <!-- Contact section -->
+        <!-- Grateful Dead History section -->
+    <section id="grateful-dead-history" class="container">
+      <h2>🎸 This Day in Grateful Dead History</h2>
+      <div id="dead-content" class="dead-content">
+        <div class="loading">🌹 Loading today's Dead history...</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:scout.pinto@gmail.com">scout.pinto@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Nicholas-Pinto" target="_blank" rel="noopener">github.com/Nicholas-Pinto</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/nicholas-pinto-153624277" target="_blank" rel="noopener">linkedin.com/in/nicholas-pinto-153624277</a></p>
+    </section>
+  </main>
+
+  <!-- Tic-tac-toe game overlay -->
+  <div id="tictactoe-overlay" class="tictactoe-overlay" style="display:none;">
+    <button class="tictactoe-close" onclick="closeTicTacToe()" aria-label="Close game">✕</button>
+    <div class="tictactoe-container">
+      <h2>🎮 Want to unlock a fun fact about Nicholas?</h2>
+      <p>Beat me in Tic-Tac-Toe! You're X, Computer is O</p>
+      <div class="tictactoe-board" id="tictactoe-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div class="tictactoe-status" id="tictactoe-status">Your turn! Click a cell</div>
+      <div class="tictactoe-buttons">
+        <button class="btn" onclick="newTicTacToeGame()">New Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project modal: populated by JS when a project is opened -->
+  <div id="project-modal" class="project-modal" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" aria-label="Close">✕</button>
+      <h3 class="modal-title">Project Title</h3>
+      <!-- images container: JS will insert project screenshots here -->
+      <div class="modal-images" aria-hidden="false"></div>
+      <div class="modal-body">Project description</div>
+      <!-- links area: repo or live links populated by JS -->
+      <div class="modal-links"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Your Name • Built with HTML, CSS, JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file (deferred execution) -->
+  <script src="/js/index.js" defer></script>
+</body>
+</html>
